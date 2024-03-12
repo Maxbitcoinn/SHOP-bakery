@@ -1,0 +1,14 @@
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+// Класс .is-scroll-disabled обычно используется для предотвращения прокрутки (scrolling) страницы или элемента во время открытого модального окна или другого всплывающего контента.
+.is-scroll-disabled {
+    overflow: hidden;
+    
+  }

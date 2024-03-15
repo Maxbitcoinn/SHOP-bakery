@@ -53,20 +53,22 @@
           </a>
           <ul class="mobile-menu__list">
             <li>
-              <a class="mobile-menu__link" href="#traditions-section">
+              <a class="mobile-menu__link" href="#traditions-section" onclick="scrollToSection('traditions-section')">
                 Наші традиції
               </a>
             </li>
             <li>
-              <a class="mobile-menu__link" href="#chefs-section">
+              <a class="mobile-menu__link" href="#chefs-section" onclick="scrollToSection('chefs-section')">
                 Шеф-кухарі
               </a>
             </li>
             <li>
-              <a class="mobile-menu__link" href="#formats-section">Формати</a>
+              <a class="mobile-menu__link" href="#formats-section" onclick="scrollToSection('formats-section')">
+                Формати
+              </a>
             </li>
             <li>
-              <a class="mobile-menu__link" href="#contact-section">
+              <a class="mobile-menu__link" href="#contact-section" onclick="scrollToSection('contact-section')">
                 Контакти
               </a>
             </li>
@@ -373,10 +375,10 @@
             </a>
           </div>
           <ul class="footer__menu">
-            <li><a class="link" href="#">Наші традиції</a></li>
-            <li><a class="link" href="#">Шеф - кухарі</a></li>
-            <li><a class="link" href="#">Формати</a></li>
-            <li><a class="link" href="#">Контакти</a></li>
+            <li><a class="link" href="#traditions-section">Наші традиції</a></li>
+            <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
+            <li><a class="link" href="#formats-section">Формати</a></li>
+            <li><a class="link" href="#contact-section">Контакти</a></li>
           </ul>
         </nav>
   
@@ -457,6 +459,7 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/formats-slider.js"></script>
+  <script src="./js/mobile-menu-redirect.js"></script>
   <script src="./js/mobile-menu.js"></script>
   <script src="./js/modal.js"></script>
 

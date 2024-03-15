@@ -11,3 +11,4 @@ menuBtnClose.addEventListener('click', toggleMenu);
 
 menuBtnOpen.addEventListener('click', disableScroll);
 menuBtnClose.addEventListener('click', disableScroll);
+

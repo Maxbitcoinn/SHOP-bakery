@@ -34,7 +34,7 @@
         <button class="header__button button modal-btn-open" type="button">
           Замовити дзвінок
         </button>
-        <button class="header__burger menu-btn-open" type="button">
+        <button class="header__burger menu-btn-open " type="button">
           <svg width="24" height="24">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
@@ -53,22 +53,20 @@
           </a>
           <ul class="mobile-menu__list">
             <li>
-              <a class="mobile-menu__link" href="#traditions-section" onclick="scrollToSection('traditions-section')">
+              <a class="mobile-menu__link" href="#traditions-section">
                 Наші традиції
               </a>
             </li>
             <li>
-              <a class="mobile-menu__link" href="#chefs-section" onclick="scrollToSection('chefs-section')">
+              <a class="mobile-menu__link" href="#chefs-section">
                 Шеф-кухарі
               </a>
             </li>
             <li>
-              <a class="mobile-menu__link" href="#formats-section" onclick="scrollToSection('formats-section')">
-                Формати
-              </a>
+              <a class="mobile-menu__link" href="#formats-section">Формати</a>
             </li>
             <li>
-              <a class="mobile-menu__link" href="#contact-section" onclick="scrollToSection('contact-section')">
+              <a class="mobile-menu__link" href="#contact-section">
                 Контакти
               </a>
             </li>
@@ -356,11 +354,9 @@
             <a class="form-terms__link" href="#">політикою конфіденційності</a></p>
           </form>
           </div>
-        <iframe  class="contact-section__map"
-         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.866260145853!2d30.50215950000001!3d50.406330000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf2dbca441ff%3A0x2444f8e979ba8152!2z0L_RgNC-0YHQv9C10LrRgiDQktCw0LvQtdGA0ZbRjyDQm9C-0LHQsNC90L7QstGB0YzQutC-0LPQviwgMTI2LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1710427907288!5m2!1suk!2sua" 
-         allowfullscreen="" 
-         loading="lazy" 
-         referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="contact-section__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.866260145853!2d30.50215950000001!3d50.406330000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf2dbca441ff%3A0x2444f8e979ba8152!2z0L_RgNC-0YHQv9C10LrRgiDQktCw0LvQtdGA0ZbRjyDQm9C-0LHQsNC90L7QstGB0YzQutC-0LPQviwgMTI2LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1710427907288!5m2!1suk!2sua" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -375,10 +371,10 @@
             </a>
           </div>
           <ul class="footer__menu">
-            <li><a class="link" href="#traditions-section">Наші традиції</a></li>
-            <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
-            <li><a class="link" href="#formats-section">Формати</a></li>
-            <li><a class="link" href="#contact-section">Контакти</a></li>
+            <li><a class="link" href="#">Наші традиції</a></li>
+            <li><a class="link" href="#">Шеф - кухарі</a></li>
+            <li><a class="link" href="#">Формати</a></li>
+            <li><a class="link" href="#">Контакти</a></li>
           </ul>
         </nav>
   
@@ -417,51 +413,67 @@
   <div class="backdrop is-hidden">
     <div class="modal">
       <button class="modal__btn-close modal-btn-close" type="button">
-      <svg width="24" height="24">
-      <use href="./images/icons.svg#icon-close"> </use>
-      </svg>
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-close"> </use>
+        </svg>
       </button>
       <h2>Замовити дзвінок</h2>
       <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
       <form name="modal-form" autocomplete="off">
+        <div class="modal__form-field input">
+          <label class="input__label visually-hidden" for="user-name">
+            Імʼя
+          </label>
+          <input
+            class="input__control"
+            type="text"
+            name="user-name"
+            id="user-name"
+            placeholder="Імʼя"
+            required
+          />
+        </div>
 
-      <div class="modal__form-field input">
-        <label class="input__label visually-hidden" for="user-name">Ім'я</label>
-        <input class="input__control"  type="text" name="user-name" id="user-name"
-        placeholder="Ім'я"
-        minlength="2"
-        maxlength="20"
-        required>
-      </div>
+        <div class="modal__form-field input">
+          <label class="input__label visually-hidden" for="user-tel">
+            Телефон
+          </label>
+          <input
+            class="input__control"
+            type="tel"
+            name="user-tel"
+            id="user-tel"
+            placeholder="Телефон"
+            pattern="^\+[0-9]{12}"
+            required
+          />
+        </div>
 
-      <div class="modal__form-field input">
-        <label class="input__label visually-hidden" for="user-tel">Телефон</label>
-        <input class="input__control" type="tel" name="user-tel" id="user-tel"
-        pattern="^\+[0-9]{12}"
-        placeholder="Телефон"
-        required>
-      </div>
-
-      <div class="modal__form-field input">
-        <label class="input__label visually-hidden" for="user-email">Електрона пошта</label>
-        <input class="input__control" type="email" name="user-email" id="user-email"
-        placeholder="Електрона пошта"
-        required>
-      </div>
-
-      <button class="modal__button button" type="submit">Замовити дзвінок</button>
-
+        <div class="modal__form-field input">
+          <label class="input__label visually-hidden" for="user-email">
+            Електронна пошта
+          </label>
+          <input
+            class="input__control"
+            type="email"
+            name="user-email"
+            id="user-email"
+            placeholder="Електронна пошта"
+            required
+          />
+        </div>
+        <button class="modal__button button" type="submit">Замовити дзвінок</button>
         <p class="form-terms">Натискаючи на кнопку я погоджуюсь з 
-        <a class="form-terms__link" href="#">політикою конфіденційності</a></p>
-      <label for=""></label>  
+          <a class="form-terms__link" href="#">політикою конфіденційності</a>
+        </p>
       </form>
+      <button class="modal__back-btn button" type="button">Back</button> <!-- Додано кнопку "Back" -->
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/formats-slider.js"></script>
-  <script src="./js/mobile-menu-redirect.js"></script>
+  <!-- <script src="./js/burger-menu.js"></script> -->
   <script src="./js/mobile-menu.js"></script>
-  <script src="./js/modal.js"></script>
 
 </body>
 
